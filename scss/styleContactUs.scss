@@ -1,0 +1,647 @@
+$colorPrincipal: rgb(234, 238, 31);
+$colorSecundario: rgb(149, 48, 180);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-family: 'Bebas Neue';
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+body{
+    background-color: black;
+}
+
+ul{
+    height: 50px;
+    line-height: 2;
+    text-decoration: none;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    background-color:$colorPrincipal;
+    list-style-type: none;
+}
+
+footer{
+    height: 200%;
+    color:rgb(255, 255, 255);
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    font-family: 'Bebas Neue';
+    text-align: left;
+    text-transform: capitalize;
+    line-height: 15px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    background-color:$colorSecundario;
+}
+
+.navFlex{
+    background-color: $colorPrincipal;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: right;
+}
+
+.footerFlex{
+    padding: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: left;
+        .footerFlex__redesSocialesYNewsletter{
+            color: black;
+        }
+
+}
+
+li:hover{
+    color: $colorSecundario;
+}
+
+/*extra small devices*/
+@media only screen and ( max-width:600px ){
+    #grilla{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 110px 60px 170px 590px;
+        grid-template-areas:"header"
+                            "nav"
+                            "tituloYSubtitulo"
+                            "datos";
+    }
+
+    .menu{
+        grid-area: nav;
+    }
+
+    @mixin datoss ($colorLetra , $tamanioLetra) {
+        color: $colorLetra;
+        font-size: $tamanioLetra;
+        
+    }
+    
+    .h1{
+        grid-area: tituloYSubtitulo;
+        justify-self: center;
+        align-self: center;
+            .h1__encabezado{
+                 @include datoss($colorPrincipal , 35px );
+                 text-align: justify;
+                text-transform: capitalize;
+                line-height: 2;
+                text-decoration: none;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                
+            }
+
+            .h1__subtitulo{
+                @include datoss(white , 29px );
+                text-align: justify;
+                text-transform: capitalize;
+                line-height: 1;
+                text-decoration: none;
+                letter-spacing: 2px;
+                word-spacing: 5px;           
+            }
+    }
+
+    .datos{
+        grid-area: datos;
+        justify-self: center;
+        align-self: center;
+            .datos__item{
+                @include datoss($colorSecundario , 27px )
+            }
+            .datos__mensaje{
+                @include datoss(white , 17px )
+            }
+    }
+
+    .ofertas{
+        
+        justify-self: center;
+        align-self: center;
+            .ofertas__mensaje{
+                @include datoss(white , 20px);
+
+            }
+    }
+
+    .botones{
+        display: flex;
+        flex-direction: center;
+        justify-self: center;
+        align-self: center;
+        font-size: 15px;
+    }
+
+    .header{
+        grid-area: header;
+        background-image: linear-gradient(to left, black, $colorPrincipal,rgb(0, 0, 0));
+        justify-self: center;
+        height: 110px;
+
+            .header__banner{
+            color:$colorSecundario;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 70px;
+            font-family: 'Bebas Neue';
+            }
+    }
+
+    li{
+        color:rgb(0, 0, 0);
+        font-style: normal;
+        font-weight: unset;
+        font-size: 15px;
+        text-align: right;
+        text-transform: none;
+        line-height: 12px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        list-style-position: inside;
+        background-color: $colorPrincipal;
+        padding: 15px;
+    }    
+
+    footer{
+        color:rgb(255, 255, 255);
+        font-style: italic;
+        font-weight: normal;
+        font-size: 12px;
+        font-family: 'Bebas Neue', cursive;
+        text-align: left;
+        text-transform: capitalize;
+        line-height: 15px;
+        text-decoration: none;
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        background-color:$colorSecundario;
+    }
+
+}
+
+/*tablets*/
+@media only screen and (min-width: 600px){
+    #grilla{
+        display: grid;   
+        grid-template-columns: 100%;
+        grid-template-rows: 110px 60px 170px 590px;
+        grid-template-areas:"header"
+                            "nav"
+                            "tituloYSubtitulo"
+                            "datos";
+    }
+
+    .menu{
+        grid-area: nav;
+    }
+
+    @mixin datoss ($colorLetra , $tamanioLetra) {
+        color: $colorLetra;
+        font-size: $tamanioLetra;
+        
+    }
+    
+    .h1{
+        grid-area: tituloYSubtitulo;
+        justify-self: center;
+        align-self: center;
+            .h1__encabezado{
+                 @include datoss($colorPrincipal , 35px );
+                 text-align: justify;
+                text-transform: capitalize;
+                line-height: 2;
+                text-decoration: none;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                
+            }
+
+            .h1__subtitulo{
+                @include datoss(white , 29px );
+                text-align: justify;
+                text-transform: capitalize;
+                line-height: 1;
+                text-decoration: none;
+                letter-spacing: 2px;
+                word-spacing: 5px;                
+            }
+    }
+
+    .datos{
+        grid-area: datos;
+        justify-self: center;
+        align-self: center;
+            .datos__item{
+                @include datoss($colorSecundario , 27px )
+            }
+            .datos__mensaje{
+                @include datoss(white , 19px )
+            }
+    }
+
+    .ofertas{
+        
+        justify-self: center;
+        align-self: center;
+            .ofertas__mensaje{
+                @include datoss(white , 20px);
+
+            }
+    }
+
+    .botones{
+        display: flex;
+        flex-direction: center;
+        justify-self: center;
+        align-self: center;
+        font-size: 15px;
+    }
+
+    .header{
+        grid-area: header;
+        background-image: linear-gradient(to left, black, $colorPrincipal,rgb(0, 0, 0));
+        justify-self: center;
+        height: 110px;
+
+            .header__banner{
+            color:$colorSecundario;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 80px;
+            font-family: 'Bebas Neue';
+            }
+    }
+
+    li{
+        color:rgb(0, 0, 0);
+        font-style: normal;
+        font-weight: unset;
+        font-size: 18px;
+        text-align: right;
+        text-transform: none;
+        line-height: 12px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        list-style-position: inside;
+        background-color: $colorPrincipal;
+        padding: 15px;
+    }    
+
+    footer{
+        color:rgb(255, 255, 255);
+        font-style: italic;
+        font-weight: normal;
+        font-size: 12px;
+        font-family: 'Bebas Neue', cursive;
+        text-align: left;
+        text-transform: capitalize;
+        line-height: 15px;
+        text-decoration: none;
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        background-color:$colorSecundario;
+    }
+}  
+
+/*tablets landscape*/
+@media only screen and (min-width: 768px){
+    #grilla{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 110px 60px 170px 590px;
+        grid-template-areas:"header"
+                            "nav"
+                            "tituloYSubtitulo"
+                            "datos";
+    }
+
+    .menu{
+        grid-area: nav;
+    }
+
+    @mixin datoss ($colorLetra , $tamanioLetra) {
+        color: $colorLetra;
+        font-size: $tamanioLetra;
+        
+    }
+    
+    .h1{
+        grid-area: tituloYSubtitulo;
+        justify-self: center;
+        align-self: center;
+            .h1__encabezado{
+                 @include datoss($colorPrincipal , 38px );
+                 text-align: justify;
+                text-transform: capitalize;
+                line-height: 2;
+                text-decoration: none;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                
+            }
+
+            .h1__subtitulo{
+                @include datoss(white , 31px );
+                text-align: justify;
+                text-transform: capitalize;
+                line-height: 1;
+                text-decoration: none;
+                letter-spacing: 2px;
+                word-spacing: 5px;                
+            }
+    }
+
+    .datos{
+        grid-area: datos;
+        justify-self: center;
+        align-self: center;
+            .datos__item{
+                @include datoss($colorSecundario , 29px )
+            }
+            .datos__mensaje{
+                @include datoss(white , 19px )
+            }
+    }
+
+    .ofertas{
+        
+        justify-self: center;
+        align-self: center;
+            .ofertas__mensaje{
+                @include datoss(white , 20px);
+
+            }
+    }
+
+    .botones{
+        display: flex;
+        flex-direction: center;
+        justify-self: center;
+        align-self: center;
+        font-size: 15px;
+    }
+
+    .header{
+        grid-area: header;
+        background-image: linear-gradient(to left, black, $colorPrincipal,rgb(0, 0, 0));
+        justify-self: center;
+        height: 110px;
+
+            .header__banner{
+            color:$colorSecundario;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 90px;
+            font-family: 'Bebas Neue';
+            }
+    }
+
+    li{
+        color:rgb(0, 0, 0);
+        font-style: normal;
+        font-weight: unset;
+        font-size: 25px;
+        text-align: right;
+        text-transform: none;
+        line-height: 12px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        list-style-position: inside;
+        background-color: $colorPrincipal;
+        padding: 15px;
+    }    
+
+}
+
+/*laptops-escritorios*/
+@media only screen and (min-width: 992px){
+    #grilla{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 110px 60px 170px 630px;
+        grid-template-areas:"header"
+                            "nav"
+                            "tituloYSubtitulo"
+                            "datos";
+    }
+
+    .menu{
+        grid-area: nav;
+    }
+
+    @mixin datoss ($colorLetra , $tamanioLetra) {
+        color: $colorLetra;
+        font-size: $tamanioLetra;
+        
+    }
+    
+    .h1{
+        grid-area: tituloYSubtitulo;
+        justify-self: center;
+        align-self: center;
+            .h1__encabezado{
+                 @include datoss($colorPrincipal , 42px );
+                 text-align: justify;
+                text-transform: capitalize;
+                line-height: 2;
+                text-decoration: none;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                
+            }
+
+            .h1__subtitulo{
+                @include datoss(white , 35px );
+                text-align: justify;
+                text-transform: capitalize;
+                line-height: 1;
+                text-decoration: none;
+                letter-spacing: 2px;
+                word-spacing: 5px;                
+            }
+    }
+
+    .datos{
+        grid-area: datos;
+        justify-self: center;
+        align-self: center;
+            .datos__item{
+                @include datoss($colorSecundario , 32px )
+            }
+            .datos__mensaje{
+                @include datoss(white , 22px )
+            }
+    }
+
+    .ofertas{
+        
+        justify-self: center;
+        align-self: center;
+            .ofertas__mensaje{
+                @include datoss(white , 22px);
+
+            }
+    }
+
+    .botones{
+        display: flex;
+        flex-direction: center;
+        justify-self: center;
+        align-self: center;
+        font-size: 15px;
+    }
+
+    .header{
+        grid-area: header;
+        background-image: linear-gradient(to left, black, $colorPrincipal,rgb(0, 0, 0));
+        justify-self: center;
+        height: 110px;
+
+            .header__banner{
+            color:$colorSecundario;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 100px;
+            font-family: 'Bebas Neue';
+            }
+    }
+
+    li{
+        color:rgb(0, 0, 0);
+        font-style: normal;
+        font-weight: unset;
+        font-size: 25px;
+        text-align: right;
+        text-transform: none;
+        line-height: 12px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        list-style-position: inside;
+        background-color: $colorPrincipal;
+        padding: 15px;
+    }    
+
+}
+
+/*dispositivos panoramicos/extra grandes*/
+@media only screen and (min-width: 1200px){
+    #grilla{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 110px 60px 170px 630px;
+        grid-template-areas:"header"
+                            "nav"
+                            "tituloYSubtitulo"
+                            "datos";               
+    }
+
+    .menu{
+        grid-area: nav;
+    }
+
+    @mixin datoss ($colorLetra , $tamanioLetra) {
+        color: $colorLetra;
+        font-size: $tamanioLetra;
+        
+    }
+    
+    .h1{
+        grid-area: tituloYSubtitulo;
+        justify-self: center;
+        align-self: center;
+            .h1__encabezado{
+                 @include datoss($colorPrincipal , 42px );
+                 text-align: justify;
+                text-transform: capitalize;
+                line-height: 2;
+                text-decoration: none;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                
+            }
+
+            .h1__subtitulo{
+                @include datoss(white , 35px );
+                text-align: justify;
+                text-transform: capitalize;
+                line-height: 1;
+                text-decoration: none;
+                letter-spacing: 2px;
+                word-spacing: 5px;                
+            }
+    }
+
+    .datos{
+        grid-area: datos;
+        justify-self: center;
+        align-self: center;
+            .datos__item{
+                @include datoss($colorSecundario , 32px )
+            }
+            .datos__mensaje{
+                @include datoss(white , 22px )
+            }
+    }
+
+    .ofertas{
+        
+        justify-self: center;
+        align-self: center;
+            .ofertas__mensaje{
+                @include datoss(white , 22px);
+
+            }
+    }
+
+    .botones{
+        display: flex;
+        flex-direction: center;
+        justify-self: center;
+        align-self: center;
+        font-size: 15px;
+    }
+
+    .header{
+        grid-area: header;
+        background-image: linear-gradient(to left, black, $colorPrincipal,rgb(0, 0, 0));
+        justify-self: center;
+        height: 110px;
+
+            .header__banner{
+            color:$colorSecundario;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 100px;
+            font-family: 'Bebas Neue';
+            }
+    }
+
+    li{
+        color:rgb(0, 0, 0);
+        font-style: normal;
+        font-weight: unset;
+        font-size: 25px;
+        text-align: right;
+        text-transform: none;
+        line-height: 12px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        list-style-position: inside;
+        background-color: $colorPrincipal;
+        padding: 15px;
+    }    
+
+}

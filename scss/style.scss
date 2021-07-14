@@ -1,0 +1,845 @@
+$colorPrincipal: rgb(234, 238, 31);
+$colorSecundario: rgb(149, 48, 180);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-family: 'Bebas Neue';
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+body{
+    background-color: black;
+}
+
+ul{
+    height: 50px;
+    line-height: 2;
+    text-decoration: none;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    background-color:$colorPrincipal;
+    list-style-type: none;
+}
+
+footer{
+    height: 200%;
+    color:rgb(255, 255, 255);
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    font-family: 'Bebas Neue';
+    text-align: left;
+    text-transform: capitalize;
+    line-height: 15px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    background-color:$colorSecundario;
+}
+
+h1{
+    color: $colorPrincipal;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 50px;
+    font-family: 'Bebas Neue';
+    text-align: justify;
+    text-transform: capitalize;
+    line-height: 2;
+    text-decoration: none;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+
+h3{
+    font-size: 40px;
+    color: $colorSecundario;
+    line-height: 2;
+    text-decoration: none;
+    letter-spacing: 2px;
+    word-spacing: 20px;
+    background-color:black;
+}
+
+h4{
+    font-size: 20px;
+}
+
+.navFlex{
+    background-color: $colorPrincipal;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: right;
+}
+
+.footerFlex{
+    padding: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: left;
+        .footerFlex__redesSocialesYNewsletter{
+            color: black;
+        }
+
+}
+
+img:hover{
+
+    transform: scale(1.3,1.3);
+}
+
+li:hover{
+    color: $colorSecundario;
+}
+
+/*extra small devices*/
+@media only screen and ( max-width:600px ){
+    #grilla{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 110px 60px 70px 50px 450px 450px 450px 450px 50px 450px 450px 450px 450px;
+        grid-template-areas: "header"
+                             "nav"  
+                             "tituloA"
+                             "tituloB"
+                             "remera1"
+                             "remera2"
+                             "remera3"
+                             "remera4"
+                             "tituloC"
+                             "buzo1"
+                             "buzo2"
+                             "buzo3"
+                             "buzo4";
+        }
+
+        .remera1{
+        background-color: black;
+        grid-area: remera1;
+        justify-self: center;
+        align-self: center;
+        }
+        .remera2{
+        background-color: black;
+        grid-area: remera2;
+        justify-self: center;
+        align-self: center;
+        }
+        .remera3{
+        background-color: black;
+        grid-area: remera3;
+        justify-self: center;
+        align-self: center;
+        }
+        .remera4{
+        background-color: black;
+        grid-area: remera4;
+        justify-self: center;
+        align-self: center;
+        }
+
+        .buzo1{
+        background-color: black;
+        grid-area: buzo1;
+        justify-self: center;
+        align-self: center;
+        }
+        .buzo2{
+        background-color: black;
+        grid-area: buzo2;
+        justify-self: center;
+        align-self: center;
+        }
+        .buzo3{
+        background-color: black;
+        grid-area: buzo3;
+        justify-self: center;
+        align-self: center;
+        }
+        .buzo4{
+        background-color: black;
+        grid-area: buzo4;
+        justify-self: center;
+        align-self: center;
+        }
+
+        .menu{
+        grid-area: nav;
+        }
+    
+        .h1{
+        align-self: center;
+            .h1__tituloPrincipal{
+                grid-area: tituloA;
+                
+            }
+        }
+
+        .h3{
+        color: black;
+        grid-area: tituloB;
+        align-self: center;
+
+            .h3__tituloA{
+                font-size: 35px;
+                color: $colorSecundario;
+                line-height: 2;
+                letter-spacing: 2px;
+                word-spacing: 20px;
+                background-color:black;
+                text-decoration: none;
+            }
+        }
+
+        .h33{
+        color: black;
+        grid-area: tituloC;
+        align-self: center;
+
+            .h33__tituloB{
+                font-size: 35px;
+                color: $colorSecundario;
+                line-height: 2;
+                letter-spacing: 2px;
+                word-spacing: 20px;
+                background-color:black;
+                text-decoration: none;
+            }
+        }
+
+        .header{
+            grid-area: header;
+            background-image: linear-gradient(to left, black, $colorPrincipal,rgb(0, 0, 0));
+            justify-self: center;
+            height: 110px;
+
+            .header__banner{
+                color:$colorSecundario;
+                font-style: italic;
+                font-weight: bolder;
+                font-size: 70px;
+                font-family: 'Bebas Neue';
+            }
+        }
+
+        li{
+            color:rgb(0, 0, 0);
+            font-style: normal;
+            font-weight: unset;
+            font-size: 15px;
+            text-align: right;
+            text-transform: none;
+            line-height: 12px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            list-style-position: inside;
+            background-color: $colorPrincipal;
+            padding: 15px;
+        }
+
+        footer{
+        color:rgb(255, 255, 255);
+        font-style: italic;
+        font-weight: normal;
+        font-size: 12px;
+        font-family: 'Bebas Neue', cursive;
+        text-align: left;
+        text-transform: capitalize;
+        line-height: 15px;
+        text-decoration: none;
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        background-color:$colorSecundario;
+        }   
+        
+}  
+
+/*tablets*/
+@media only screen and (min-width: 600px){
+    #grilla{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 120px 60px 70px 50px 450px 450px 50px 450px 450px;
+    grid-template-areas: "header header"
+                         "nav nav"  
+                         "tituloA tituloA"
+                         "tituloB tituloB"
+                         "remera1 remera2"
+                         "remera3 remera4"
+                         "tituloC tituloC"
+                         "buzo1 buzo2"
+                         "buzo3 buzo4";
+    
+    }
+
+    .remera1{
+    background-color: black;
+    grid-area: remera1;
+    justify-self: center;
+    align-self: center;
+    }
+    .remera2{
+    background-color: black;
+    grid-area: remera2;
+    justify-self: center;
+    align-self: center;
+    }
+    .remera3{
+    background-color: black;
+    grid-area: remera3;
+    justify-self: center;
+    align-self: center;
+    }
+    .remera4{
+    background-color: black;
+    grid-area: remera4;
+    justify-self: center;
+    align-self: center;
+    }
+
+    .buzo1{
+    background-color: black;
+    grid-area: buzo1;
+    justify-self: center;
+    align-self: center;
+    }
+    .buzo2{
+    background-color: black;
+    grid-area: buzo2;
+    justify-self: center;
+    align-self: center;
+    }
+    .buzo3{
+    background-color: black;
+    grid-area: buzo3;
+    justify-self: center;
+    align-self: center;
+    }
+    .buzo4{
+    background-color: black;
+    grid-area: buzo4;
+    justify-self: center;
+    align-self: center;
+    }
+
+    .menu{
+    grid-area: nav;
+    }
+
+    .h1{
+    align-self: center;
+        .h1__tituloPrincipal{
+            grid-area: tituloA;
+        }
+    }
+
+    .h3{
+    color: black;
+    grid-area: tituloB;
+    align-self: center;
+
+        .h3__tituloA{
+            font-size: 35px;
+            color: $colorSecundario;
+            line-height: 2;
+            letter-spacing: 2px;
+            word-spacing: 20px;
+            background-color:black;
+            text-decoration: none;
+        }
+    }
+
+    .h33{
+    color: black;
+    grid-area: tituloC;
+    align-self: center;
+
+        .h33__tituloB{
+            font-size: 35px;
+            color: $colorSecundario;
+            line-height: 2;
+            letter-spacing: 2px;
+            word-spacing: 20px;
+            background-color:black;
+            text-decoration: none;
+        }
+    }
+
+    .header{
+        grid-area: header;
+        background-image: linear-gradient(to left, black, $colorPrincipal,rgb(0, 0, 0));
+        justify-self: center;
+        height: 110px;
+
+        .header__banner{
+            color:$colorSecundario;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 90px;
+            font-family: 'Bebas Neue';
+        }
+    }
+
+    li{
+        color:rgb(0, 0, 0);
+        font-style: normal;
+        font-weight: unset;
+        font-size: 20px;
+        text-align: right;
+        text-transform: none;
+        line-height: 12px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        list-style-position: inside;
+        background-color: $colorPrincipal;
+        padding: 15px;
+    }
+
+   footer{
+    color:rgb(255, 255, 255);
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: 'Bebas Neue', cursive;
+    text-align: left;
+    text-transform: capitalize;
+    line-height: 15px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    background-color:$colorSecundario;
+    }   
+} 
+
+/*tablets landscape*/
+@media only screen and (min-width: 768px){
+    #grilla{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 120px 60px 70px 50px 450px 450px 50px 450px 450px;
+    grid-template-areas: "header header"
+                         "nav nav"  
+                         "tituloA tituloA"
+                         "tituloB tituloB"
+                         "remera1 remera2"
+                         "remera3 remera4"
+                         "tituloC tituloC"
+                         "buzo1 buzo2"
+                         "buzo3 buzo4";
+    
+    }
+
+    .remera1{
+    background-color: black;
+    grid-area: remera1;
+    justify-self: center;
+    align-self: center;
+    }
+    .remera2{
+    background-color: black;
+    grid-area: remera2;
+    justify-self: center;
+    align-self: center;
+    }
+    .remera3{
+    background-color: black;
+    grid-area: remera3;
+    justify-self: center;
+    align-self: center;
+    }
+    .remera4{
+    background-color: black;
+    grid-area: remera4;
+    justify-self: center;
+    align-self: center;
+    }
+
+    .buzo1{
+    background-color: black;
+    grid-area: buzo1;
+    justify-self: center;
+    align-self: center;
+    }
+    .buzo2{
+    background-color: black;
+    grid-area: buzo2;
+    justify-self: center;
+    align-self: center;
+    }
+    .buzo3{
+    background-color: black;
+    grid-area: buzo3;
+    justify-self: center;
+    align-self: center;
+    }
+    .buzo4{
+    background-color: black;
+    grid-area: buzo4;
+    justify-self: center;
+    align-self: center;
+    }
+
+    .menu{
+        grid-area: nav;
+    }
+
+    .h1{
+        align-self: center;
+            .h1__tituloPrincipal{
+                grid-area: tituloA;
+            }
+    }
+
+    .h3{
+        color: black;
+        grid-area: tituloB;
+        align-self: center;
+
+            .h3__tituloA{
+                font-size: 40px;
+                color: $colorSecundario;
+                line-height: 2;
+                letter-spacing: 2px;
+                word-spacing: 20px;
+                background-color:black;
+                text-decoration: none;
+            }
+    }   
+
+    .h33{
+        color: black;
+        grid-area: tituloC;
+        align-self: center;
+
+            .h33__tituloB{
+                font-size: 40px;
+                color: $colorSecundario;
+                line-height: 2;
+                letter-spacing: 2px;
+                word-spacing: 20px;
+                background-color:black;
+                text-decoration: none;
+            }
+    }
+
+    .header{
+    grid-area: header;
+    background-image: linear-gradient(to left, black, $colorPrincipal,rgb(0, 0, 0));
+    justify-self: center;
+    height: 120px;
+
+        .header__banner{
+            color:$colorSecundario;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 92px;
+            font-family: 'Bebas Neue';
+        }   
+    }
+
+    li{
+    color:rgb(0, 0, 0);
+    font-style: normal;
+    font-weight: unset;
+    font-size: 25px;
+    text-align: right;
+    text-transform: none;
+    line-height: 15px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    list-style-position: inside;
+    background-color: $colorPrincipal;
+    padding: 15px;
+    }  
+}
+
+/*laptops-escritorios*/
+@media only screen and (min-width: 992px){
+    #grilla{
+        display:grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 120px 65px 70px 50px 450px 50px 450px;
+        grid-template-areas: "header header header header"
+                             "nav nav nav nav"  
+                             "tituloA tituloA tituloA tituloA"
+                             "tituloB tituloB tituloB tituloB"
+                             "remera1 remera2 remera3 remera4"
+                             "tituloC tituloC tituloC tituloC"
+                             "buzo1 buzo2 buzo3 buzo4";
+        
+        }
+
+        .remera1{
+        background-color: black;
+        grid-area: remera1;
+        justify-self: center;
+        align-self: center;
+        }
+        .remera2{
+        background-color: black;
+        grid-area: remera2;
+        justify-self: center;
+        align-self: center;
+        }
+        .remera3{
+        background-color: black;
+        grid-area: remera3;
+        justify-self: center;
+        align-self: center;
+        }
+        .remera4{
+        background-color: black;
+        grid-area: remera4;
+        justify-self: center;
+        align-self: center;
+        }
+
+        .buzo1{
+        background-color: black;
+        grid-area: buzo1;
+        justify-self: center;
+        align-self: center;
+        }
+        .buzo2{
+        background-color: black;
+        grid-area: buzo2;
+        justify-self: center;
+        align-self: center;
+        }
+        .buzo3{
+        background-color: black;
+        grid-area: buzo3;
+        justify-self: center;
+        align-self: center;
+        }
+        .buzo4{
+        background-color: black;
+        grid-area: buzo4;
+        justify-self: center;
+        align-self: center;
+        }
+
+        .menu{
+            grid-area: nav;
+        }
+    
+        .h1{
+        align-self: center;
+            .h1__tituloPrincipal{
+                grid-area: tituloA;
+              }
+        }
+
+        .h3{
+        color: black;
+        grid-area: tituloB;
+        align-self: center;
+
+            .h3__tituloA{
+                font-size: 43px;
+                color: $colorSecundario;
+                line-height: 2;
+                letter-spacing: 2px;
+                word-spacing: 20px;
+                background-color:black;
+                text-decoration: none;
+            }
+        }
+
+        .h33{
+        color: black;
+        grid-area: tituloC;
+        align-self: center;
+
+            .h33__tituloB{
+                font-size: 43px;
+                color: $colorSecundario;
+                line-height: 2;
+                letter-spacing: 2px;
+                word-spacing: 20px;
+                background-color:black;
+                text-decoration: none;
+            }
+        }
+
+        .header{
+        grid-area: header;
+        background-image: linear-gradient(to left, black, $colorPrincipal,rgb(0, 0, 0));
+        justify-self: center;
+        height: 120px;
+
+            .header__banner{
+            color:$colorSecundario;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 95px;
+            font-family: 'Bebas Neue';
+            }   
+        }
+
+        li{
+        color:rgb(0, 0, 0);
+        font-style: normal;
+        font-weight: unset;
+        font-size: 25px;
+        text-align: right;
+        text-transform: none;
+        line-height: 15px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        list-style-position: inside;
+        background-color: $colorPrincipal;
+        padding: 15px;
+        }  
+}
+
+/*dispositivos panoramicos/extra grandes*/
+@media only screen and (min-width: 1200px){
+    #grilla{
+        display:grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 120px 65px 70px 50px 450px 50px 450px;
+        grid-template-areas: "header header header header"
+                             "nav nav nav nav"  
+                             "tituloA tituloA tituloA tituloA"
+                             "tituloB tituloB tituloB tituloB"
+                             "remera1 remera2 remera3 remera4"
+                             "tituloC tituloC tituloC tituloC"
+                             "buzo1 buzo2 buzo3 buzo4";
+        
+        }
+
+        .remera1{
+        background-color: black;
+        grid-area: remera1;
+        justify-self: center;
+        align-self: center;
+        }
+        .remera2{
+        background-color: black;
+        grid-area: remera2;
+        justify-self: center;
+        align-self: center;
+        }
+        .remera3{
+        background-color: black;
+        grid-area: remera3;
+        justify-self: center;
+        align-self: center;
+        }
+        .remera4{
+        background-color: black;
+        grid-area: remera4;
+        justify-self: center;
+        align-self: center;
+        }
+
+        .buzo1{
+        background-color: black;
+        grid-area: buzo1;
+        justify-self: center;
+        align-self: center;
+        }
+        .buzo2{
+        background-color: black;
+        grid-area: buzo2;
+        justify-self: center;
+        align-self: center;
+        }
+        .buzo3{
+        background-color: black;
+        grid-area: buzo3;
+        justify-self: center;
+        align-self: center;
+        }
+        .buzo4{
+        background-color: black;
+        grid-area: buzo4;
+        justify-self: center;
+        align-self: center;
+        }
+
+        .menu{
+            grid-area: nav;
+        }
+    
+        .h1{
+        align-self: center;
+            .h1__tituloPrincipal{
+                grid-area: tituloA;
+              }
+        }
+
+        .h3{
+        color: black;
+        grid-area: tituloB;
+        align-self: center;
+
+            .h3__tituloA{
+                font-size: 47px;
+                color: $colorSecundario;
+                line-height: 2;
+                letter-spacing: 2px;
+                word-spacing: 20px;
+                background-color:black;
+                text-decoration: none;
+            }
+        }
+
+        .h33{
+        color: black;
+        grid-area: tituloC;
+        align-self: center;
+
+            .h33__tituloB{
+                font-size: 47px;
+                color: $colorSecundario;
+                line-height: 2;
+                letter-spacing: 2px;
+                word-spacing: 20px;
+                background-color:black;
+                text-decoration: none;
+            }
+        }
+
+        .header{
+        grid-area: header;
+        background-image: linear-gradient(to left, black, $colorPrincipal,rgb(0, 0, 0));
+        justify-self: center;
+        height: 120px;
+
+            .header__banner{
+            color:$colorSecundario;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 100px;
+            font-family: 'Bebas Neue';
+            }   
+        }
+
+        li{
+        color:rgb(0, 0, 0);
+        font-style: normal;
+        font-weight: unset;
+        font-size: 25px;
+        text-align: right;
+        text-transform: none;
+        line-height: 15px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        list-style-position: inside;
+        background-color: $colorPrincipal;
+        padding: 15px;
+        } 
+} 
+
+
+
